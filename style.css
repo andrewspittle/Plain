@@ -46,7 +46,7 @@ html {
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 body {
-	background: #f1f1f1;
+	background: #fff;
 }
 article,
 aside,
@@ -320,7 +320,7 @@ textarea {
 
 /* Links */
 a {
-	color: #69a8ba;
+	color: #0076a3;
 }
 a:visited {
 	color: #666;
@@ -379,13 +379,15 @@ Color scheme
 }
 header#masthead,
 footer#colophon {
-	background-color: #363b3f;
 	padding: 1.5em 70px;
 }
 
 /* =Header
 ----------------------------------------------- */
 
+header#masthead {
+	border-bottom: 1px solid #f1f1f1;
+}
 header#masthead img {
 	float: left;
 	margin: 0 2% 0 0;
@@ -394,25 +396,30 @@ header#masthead img {
 }
 header#masthead #site-title {
 	display: inline;
-	font: bold 18px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font: bold 16px/1.5em "freight-text-pro-1", "freight-text-pro-2", Georgia, serif;
 	font-size: 1.8rem;
-	text-transform: uppercase;
+	margin-right: .5em;
 	vertical-align: top;
 }
+header#masthead #site-title:after {
+	color: #989898;
+	content: "/";
+	font-weight: 100;
+	margin-left: .5em;
+}
 header#masthead #site-title a {
-	color: #fff;
+	color: #3d3d3d;
 	text-decoration: none;
 }
 header#masthead #site-title a:hover,
 header#masthead #site-title a:focus,
 header#masthead #site-title a:active {
-	color: #e1e1e1;
+	color: #000;
 }
 header#masthead .site-description {
 	color: #989898;
 	display: inline;
-	float: right;
-	font: 16px/1.6875em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font: 16px/1.6875em "freight-text-pro-1", "freight-text-pro-2", Georgia, serif;
 	font-size: 1.6rem;
 }
 
@@ -422,9 +429,8 @@ header#masthead .site-description {
 .hentry {
 }
 .entry-title {
-	font-size: 34px;
-	font-weight: bold;
-	line-height: 1.1em;
+	font: bold 28px/1.1em "freight-text-pro-1", "freight-text-pro-2", Georgia, serif;
+	font-size: 2.8rem;
 	margin-bottom: 1em;
 }
 .entry-title a,
@@ -435,8 +441,8 @@ header#masthead .site-description {
 .entry-tags,
 .edit-link {
 	display: block;
-	font: 14px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-size: 1.4rem;
+	font: 12px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 1.2rem;
 	margin: 0.25em 0;
 }
 .entry-date:before {
@@ -444,7 +450,7 @@ header#masthead .site-description {
 	content: '\f303';
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1em 'Genericons';
+	font: normal 16px/0.9em 'Genericons';
 	padding-right: 5px;
 	vertical-align: text-bottom;
 }
@@ -453,7 +459,7 @@ header#masthead .site-description {
 	content: '\f302';
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1.2em 'Genericons';
+	font: normal 16px/1em 'Genericons';
 	padding-right: 5px;
 	vertical-align: text-bottom;
 }
@@ -486,32 +492,26 @@ header#masthead .site-description {
 
 /* Standard format */
 article.format-standard {
-	background-color: #fff;
 	padding: 3em 70px;
 }
 
 /* Aside format */
 article.format-aside {
-	background-color: #FDF6E3;
 	padding: 3em 70px;
 }
 
 /* Quote format */
 article.format-quote {
-	background-color: #e1e1e1;
 	padding: 3em 70px;
 }
 
 /* Link format */
 article.format-link {
-	background-color: #fff;
 	padding: 3em 70px;
 }
 
 /* Gallery format */
 article.format-gallery {
-	background-color: #222222;
-	color: #f1f1f1;
 	padding: 3em 0;
 }
 article.format-gallery .attachment-media-feature {
@@ -528,19 +528,9 @@ article.format-gallery .entry-title {
 	margin: 0 auto 1em auto;
 	padding-top: 1em;
 }
-article.format-gallery .entry-date:before,
-article.format-gallery .entry-tags:before {
-	color: #69a8ba;
-}
-article.format-gallery .entry-date:before,
-article.format-gallery .entry-tags:before {
-	color: #f1f1f1;
-}
 
 /* Image format */
 article.format-image {
-	background-color: #363b3f;
-	color: #f1f1f1;
 	padding: 3em 0;
 }
 article.format-image .entry-title,
@@ -554,32 +544,14 @@ article.format-image .attachment-media-feature-single {
 	display: block;
 	margin: -3em auto 0 auto;
 }
-article.format-image .entry-date:before,
-article.format-image .entry-tags:before {
-	color: #f1f1f1;
-}
 
 /* Status format */
 article.format-status {
-	background-color: #69a8ba;
-	color: #fff;
 	padding: 3em 70px;
-}
-article.format-status a {
-	color: #f1f1f1;
-}
-article.format-status a:hover,
-article.format-status a:active,
-article.format-status a:focus {
-	color: #e1e1e1;
 }
 article.format-status a:active {
     position: relative;
     top: 1px;
-}
-article.format-status .entry-date:before,
-article.format-status .entry-tags:before {
-	color: #f1f1f1;
 }
 
 /* Pages */
@@ -593,8 +565,8 @@ section.error-404 .page-content {
 ----------------------------------------------- */
 
 header.page-header {
-	background-color: #222222;
-	color: #f1f1f1;
+	background-color: #f1f1f1;
+	color: #989898;
 	padding: 1em 70px;
 }
 
@@ -602,7 +574,6 @@ header.page-header {
 ----------------------------------------------- */
 
 #nav-below {
-	background-color: #e1e1e1;
 	font: 14px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-size: 1.4rem;
 	margin: 0 auto;
@@ -723,8 +694,7 @@ article.attachment {
 ----------------------------------------------- */
 
 #comments {
-	background-color: #e1e1e1;
-	border-top: 1px solid #e1e1e1;
+	border-top: 1px solid #f1f1f1;
 	padding: 3em 70px;
 }
 #comments:after {
@@ -879,8 +849,8 @@ article.attachment {
 ----------------------------------------------- */
 
 #sidebar {
-	background-color: #363b3f;
-	color: #f1f1f1;
+	border-top: 1px solid #f1f1f1;
+	color: #3d3d3d;
 	font: 14px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	font-size: 1.4rem;
 	padding: 1.5em 70px 0 70px;
@@ -897,7 +867,7 @@ article.attachment {
 	width: 19%;
 }
 #sidebar aside.widget {
-	border-bottom: 1px solid #666;
+	border-bottom: 1px solid #f1f1f1;
 	padding: 1.5em 0;
 }
 #sidebar #tertiary aside.widget:last-of-type {
@@ -937,17 +907,17 @@ article.attachment {
 ----------------------------------------------- */
 
 footer#colophon {
-	font: 14px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-size: 1.4rem;
+	font: 13px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 1.3rem;
 }
 footer#colophon a {
-	color: #f1f1f1;
+	color: #3d3d3d;
 	text-decoration: none;
 }
 footer#colophon a:hover,
 footer#colophon a:active,
 footer#colophon a:focus {
-	color: #e1e1e1;
+	color: #000;
 }
 
 /* =Medium Viewports
@@ -992,17 +962,12 @@ footer#colophon a:focus {
 	
 	/* Header */
 	header#masthead #site-title {
-		display: block;
 		font-size: 16px;
 		font-size: 1.6rem;
-		text-align: center;
 	}
 	header#masthead .site-description {
-		display: block;
-		float: none;
 		font-size: 14px;
 		font-size: 1.4rem;
-		text-align: center;
 	}
 
 	/* Content */
@@ -1101,6 +1066,15 @@ footer#colophon a:focus {
 	article.page,
 	section.error-404 .page-content {
 		padding: 3em 5%;
+	}
+	
+	/* Header */
+	header#masthead #site-title,
+	header#masthead .site-description {
+//		display: block;
+	}
+	header#masthead #site-title:after {
+//		content: "";
 	}
 	
 	/* Content */
