@@ -48,6 +48,12 @@ function plain_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
+	/**
+	 * Register custom image sizes
+	 */
+	add_image_size( 'media-feature-single', 1200, 9999, false ); //1200 pixels wide, unlimited height
+	add_image_size( 'media-feature', 1200, 9999, false ); //1200 pixels wide, unlimited height
 
 	/**
 	 * Add support for the Aside Post Formats
